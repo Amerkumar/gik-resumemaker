@@ -1,0 +1,85 @@
+@charset "utf-8";
+// @import "~bulma/bulma";
+
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
+// Set your brand colors
+$purple: #8A4D76;
+$pink: #FA7C91;
+$brown: #757763;
+$beige-light: #D0D1CD;
+$beige-lighter: #EFF0EB;
+
+// Update Bulma's global variables
+$family-sans-serif: "Nunito", sans-serif;
+$grey-dark: $brown;
+$grey-light: $beige-light;
+$primary: $purple;
+$link: $pink;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+// Update some of Bulma's component variables
+$body-background-color: $beige-lighter;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+// Import only what you need from Bulma
+@import "~bulma/sass/utilities/_all";
+@import "~bulma/sass/components/_all";
+@import "~bulma/sass/base/_all";
+@import "~bulma/sass/elements/_all";
+// @import "~bulma/sass/elements/container";
+// @import "~bulma/sass/elements/form";
+// @import "~bulma/sass/elements/title";
+@import "~bulma/sass/layout/_all";
+@import "~bulma/sass/grid/_all";
+// @import "~bulma/sass/layout/section";
+
+// #cv-wrapper input {
+//     border: none;
+//     border-color: transparent;
+// }
+
+#cv-wrapper textarea {
+    resize : vertical;
+    // width: 793x;
+  }
+ .container {
+      width: 793px;
+      max-width: 793px;
+  }
+.tbBorder {
+    border-top: 3px solid grey; 
+    border-bottom: 3px solid grey;
+}
+.has-padding-20 {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-top: 10px;
+}
+.has-padding-15 {
+    padding : 15px;
+}
+.is-borderless {
+    border : 0px;
+}
+
+.is-negative-margin-15 {
+    margin-top: -15px;
+}
+.is-negative-margin-10 {
+    margin-top: -10px;
+}
+
+.onFocus {
+    display: none;
+}
+    
+.addSection:hover + .onFocus {
+    display: block;
+}

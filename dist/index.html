@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resume Maker</title>
+    <link rel="stylesheet" href="css/mystyles.css">
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
+    <script src="http://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <!-- Date and Range Picker -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <!-- Popover for buttons -->
+    <script src="https://unpkg.com/tippy.js@2.5.4/dist/tippy.all.min.js"></script>
+
+  </head>
+  <body>
+    <body>
+
+        <section class="section">
+          <div class="container has-text-centered">
+              <!-- Add filename here -->
+            <h1 class="title">Amer's Resume</h1> 
+            <button id="download" class="button is-success">
+                    <span class="icon is-small">
+                      <i class="fas fa-check"></i>
+                    </span>
+                    <span>Download as PDF</span>
+            </button>
+          </div>
+        </section>
+        <!-- CV Wrapper Start Here -->
+        <section  class="section">
+            <div id="cv-wrapper" class="container has-background-white has-text-weight-semibold">
+                <!-- Introduction Section -->
+                <div class="container">  
+                    <br />
+                    <!-- Name here -->
+                    <input class="input is-marginless is-inline is-size-4" type="text" placeholder="Your Name">
+                    <!-- Objective Here -->
+                    <p contenteditable="true" class="is-marginless has-padding-15">A public-relations position which will maximize opportunities to develop and implement programs, to organize people and events, and to communicate positive ideas and images. Effective in public speaking and in managing a publicity/promotional campaign. </p>   
+                </div>
+                <!-- Contact Section -->
+                <div class="container tbBorder">
+                <div class="level">
+                        <div class="level-item has-text-centered">
+                          <div>
+                            <p class="is-size-5 has-text-weight-light"><i class="far fa-envelope"></i> amer.tanwani@gmail.com</p> 
+                          </div>
+                        </div>
+                        <div class="level-item has-text-centered">
+                          <div>
+                            <p class="is-size-5"><i class="fas fa-mobile-alt"></i> 0312-3011155</p>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Main Body Section -->
+
+                <br />
+                <!-- Education Section -->
+                <div id="dEducationWrapper" class="container has-padding-20">
+                    <h1 id="hEducationPopoverHolder" class="title is-size-2 is-inline has-text-weight-bold is-marginless">Education</h1>
+                    <!-- Popover button for adding education items -->
+                    <div id="dEducationPopover" style="display: none;">
+                            <button id="bAddEducation" class="button">Add Education</button>
+                    </div>
+                  <div id="dEducationSection">   
+                    <div class="columns is-marginless">
+                        <div class="column is-9 is-paddingless">
+                            <!-- Degree Name -->
+                            <input class="input is-paddingless is-borderless is-size-4 has-text-weight-semibold" type="text" placeholder="Bachelor of Computer Engineering">
+                        </div>
+                        <div class="column is-paddingless">
+                            <!-- CGPA or Marks -->
+                            <input class="input is-inline is-paddingless has-text-right is-borderless is-size-6 has-text-weight-light" type="text" placeholder="3.38/4.00">
+                        </div>
+                    </div>
+                    <!-- Institute Name -->
+                    <input class="input is-paddingless is-borderless is-size-6 is-negative-margin-10  has-text-weight-semibold" type="text" placeholder="Ghulam Ishaq Khan Institute of Engineering, Science and Technology">
+                    <!-- Date and Range Picker -->
+                    <input class="input is-paddingless  is-borderless is-size-7 is-negative-margin-10 has-text-weight-light"  type="text" name="daterange" value="01/01/2018 - 01/15/2018" />
+                </div> 
+            </div>
+                <!-- Work Experience Section -->
+                <div class="container has-padding-20">
+                        <h1 class="title is-size-2 has-text-weight-bold is-marginless">Work Experience</h1>
+                        <div class="columns is-marginless">
+                            <div class="column is-9 is-paddingless">
+                                <!-- Title of Project -->
+                                <input class="input is-paddingless is-borderless is-size-4 has-text-weight-semibold" type="text" placeholder="Sentiment Analysis">
+                            </div>
+                            <div class="column is-paddingless">
+                                <!-- Location -->
+                                <input class="input is-inline is-paddingless has-text-right is-borderless is-size-6 has-text-weight-light" type="text" placeholder="Islamabad, PK">
+                            </div>
+                        </div>
+                        <!-- Company Name -->
+                        <input class="input is-paddingless is-borderless is-size-6 is-negative-margin-10 has-text-weight-semibold" type="text" placeholder="Teradata">
+                        <!-- Date and Range Picker -->
+                        <input class="input is-paddingless  is-borderless is-size-7 is-negative-margin-10 has-text-weight-light"  type="text" name="daterange" value="01/01/2018 - 01/15/2018" />
+                        <!-- Description of Project  -->
+                        <p contenteditable="true" class="is-marginless has-padding-15">Loading Real Time Twitter Tweets using Flume in Hadoop Framework and performing sentiment analysis by using dictionary of rated words. </p>   
+                </div>
+                <!-- Academic Projects Section -->
+                <div class="container has-padding-20">
+                        <h1 class="title is-size-2 has-text-weight-bold is-marginless">Academic Projects</h1>
+                        <!-- Project Title -->
+                        <input class="input is-paddingless is-borderless is-size-6 has-text-weight-semibold" type="text" placeholder="Simon Game Implementation Using Logic Gates">
+                        <!-- Description of Project  -->
+                        <p contenteditable="true" class="is-marginless has-padding-15">Fall 2015 Digital Fundamentals Project. What i learnt from this project that it is very difficult to make simon game using simple logic ICs such as adder, mux , decoders etc yet not impossible. I was not able to complete it. </p>   
+                </div>
+                 <!-- Academics and Achievements Section -->
+                 <div class="container has-padding-20">
+                        <h1 class="title is-size-2 has-text-weight-bold is-marginless">Achievements</h1>
+                        <!-- Project Title -->
+                        <input class="input is-paddingless is-borderless is-size-6 has-text-weight-semibold" type="text" placeholder="Android Basic Nanodegree By Udacity">
+                        <!-- Description of Project  -->
+                        <p contenteditable="true" class="is-marginless has-padding-15">Completed Android Basics Nano degree Course by Google from Udacity. Did not bought any certification. Familiarity with Android but Nowadays learning golang.</p>
+                </div>
+                <!-- Skills Section -->
+                <div class="container has-padding-20">
+                        <h1 class="title is-size-2 has-text-weight-bold is-marginless">Skills</h1>
+                        <span class="tag is-link">Java</span>
+                        <span class="tag is-link">Android</span>
+                        <span class="tag is-link">Golang</span>
+                        <span class="tag is-link">C/C++</span>
+                </div>
+                <br>
+                <br>
+                <br>
+            </div>
+        </section>
+        
+
+        <!-- CV Wrapper End Here -->
+       
+      </body>
+  <script src="js/bundle.js"></script>
+  </body>
+</html>
