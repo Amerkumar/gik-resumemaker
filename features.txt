@@ -2,4 +2,6 @@
 2. Picture
 3. Space Utilization
 4. Optional Differences
-5. 
+5. Contact Section Modal
+6. Forcing on Page CV 
+7. Tour Feature -- Use power tour

@@ -45,6 +45,7 @@
                 </div>
                 <!-- Contact Section -->
                 <div class="container tbBorder">
+
                 <div class="level">
                         <div class="level-item has-text-centered">
                           <div>
@@ -56,10 +57,12 @@
                             <p class="is-size-5"><i class="fas fa-mobile-alt"></i> 0312-3011155</p>
                           </div>
                         </div>
-                    </div>
+                </div>
+                 
                 </div>
                 <!-- Main Body Section -->
-
+                <!-- General Delete Button For all the additions in cv -->
+                 
                 <br />
                 <!-- Education Section -->
                 <div id="dEducationWrapper" class="container has-padding-20">
@@ -68,7 +71,7 @@
                     <div id="dEducationPopover" style="display: none;">
                             <button id="bAddEducation" class="button">Add Education</button>
                     </div>
-                  <div id="dEducationSection">   
+                  <div id="dEducationSection" class="deleteClass">   
                     <div class="columns is-marginless">
                         <div class="column is-9 is-paddingless">
                             <!-- Degree Name -->
@@ -83,6 +86,9 @@
                     <input class="input is-paddingless is-borderless is-size-6 is-negative-margin-10  has-text-weight-semibold" type="text" placeholder="Ghulam Ishaq Khan Institute of Engineering, Science and Technology">
                     <!-- Date and Range Picker -->
                     <input class="input is-paddingless  is-borderless is-size-7 is-negative-margin-10 has-text-weight-light"  type="text" name="daterange" value="01/01/2018 - 01/15/2018" />
+                    <div id="dDeletePopover" style="display: none;">
+                        <button id="dDeletePopoverButton" class="button is-dark bDeleteAddition"><i class="far fa-trash-alt"></i></button>
+                    </div> 
                 </div> 
             </div>
                 <!-- Work Experience Section -->

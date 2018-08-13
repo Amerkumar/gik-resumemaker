@@ -1,5 +1,6 @@
 require('./css/mystyle.scss');
 require('./js/popover.js')
+require('./js/modal')
 
 function genPdf() {
     html2canvas(document.getElementById("cv-wrapper")).then(function(canvas) {
@@ -62,15 +63,68 @@ tippy('#hEducationPopoverHolder', {
 });
 
 // add education function
-let i = 1;
+let eduSecCount = 1;
 function addEducation() {
+   
     console.log("Add Education");
     var div = document.getElementById('dEducationSection'),
     clone = div.cloneNode(true); // true means clone all childNodes and all event handlers
-    clone.id = "dEducationSection-" + i;
+    clone.id = "dEducationSection-" + eduSecCount;
+    // console.log(clone.childNodes[11].childNodes[1]);
+    clone.childNodes[11].id = 'dDeletePopover-' + eduSecCount;
+    clone.childNodes[11].childNodes[1].id = "dDeletePopoverButton-" + eduSecCount;
     document.getElementById('dEducationWrapper').appendChild(clone);
-    i++;
+    addDeletePopover(eduSecCount);
+    eduSecCount++;
 }
 console.log("listener");
 // document.getElementById("baddeducation").onclick = addEducation;
 $(document).on('click', '#bAddEducation', addEducation);
+
+function addDeletePopover(eduSecCount) {
+tippy('#dEducationSection-' + eduSecCount, {
+    html: '#dDeletePopover-' + eduSecCount,
+    position: 'left',
+    arrow: true,
+    delay: 100,
+    size: 'large',
+    duration: 500,
+    animation: 'scale',
+    interactive: true,
+});
+// $(document).on('click', '#dDeletePopover-'+i, removeElement);
+$(document).on('click',  '#dDeletePopoverButton-' + eduSecCount, removeElement);
+
+}
+
+
+function removeElement() {
+    // alert("hello");
+    // Removes an element from the document
+    var elementId = this.getAttribute('id');
+    console.log(elementId);
+    var eduSecNumber = elementId.split('-');
+    console.log(eduSecNumber[1]);
+    var dSECTION = "#dEducationSection-" + parseInt(eduSecNumber[1]);;
+    console.log(dSECTION);
+    let deleteNode = document.querySelector(dSECTION);
+    clearInner(deleteNode);
+    // console.log(deleteNode.parentNode.removeChild(deleteNode));
+    deleteNode.parentNode.removeChild(deleteNode);
+}
+
+function clearInner(node) {
+    while (node.hasChildNodes()) {
+      clear(node.firstChild);
+    }
+  }
+  
+  function clear(node) {
+    while (node.hasChildNodes()) {
+      clear(node.firstChild);
+    }
+    node.parentNode.removeChild(node);
+    // console.log(node, "cleared!");
+  }
+  
+  

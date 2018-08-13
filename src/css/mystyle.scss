@@ -43,6 +43,7 @@ $input-shadow: none;
 //     border: none;
 //     border-color: transparent;
 // }
+@import "~tingle.js/dist/tingle.min.css";
 
 #cv-wrapper textarea {
     resize : vertical;
@@ -68,7 +69,6 @@ $input-shadow: none;
 .is-borderless {
     border : 0px;
 }
-
 .is-negative-margin-15 {
     margin-top: -15px;
 }
@@ -83,3 +83,19 @@ $input-shadow: none;
 .addSection:hover + .onFocus {
     display: block;
 }
+
+.white-bottom-border {
+    outline: 0;
+    border-width: 0 0 2px!important;
+    border-color: hsl(0, 0%, 4%);
+  }
+  .white-bottom-border:focus {
+    border-color: hsl(171, 100%, 41%);
+  }
+
+  .top-padding-30 {
+      padding-top: 30px;
+      padding-right: 0px;
+  }
+// tingle js for modal
+
