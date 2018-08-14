@@ -6018,3 +6018,13 @@ a.tag:hover {
 .top-padding-30 {
   padding-top: 30px;
   padding-right: 0px; }
+
+.has-background-beige-light {
+  background-color: #EFF0EB; }
+
+.has-padding-left-15 {
+  padding: 0px;
+  padding-left: 15px; }
+
+input:focus {
+  outline: 0px; }

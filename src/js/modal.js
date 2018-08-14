@@ -156,7 +156,7 @@ modal.setContent(`
                     `);
 
 // add a button
-modal.addFooterBtn('Close', 'tingle-btn tingle-btn--primary', function() {
+modal.addFooterBtn('Save', 'tingle-btn tingle-btn--primary', function() {
     // here goes some logic
     modal.close();
 });

@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Resume Maker</title>
     <link rel="stylesheet" href="css/mystyles.css">
     <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
     <script src="http://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
     <!-- Date and Range Picker -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
@@ -16,84 +18,119 @@
     <!-- Popover for buttons -->
     <script src="https://unpkg.com/tippy.js@2.5.4/dist/tippy.all.min.js"></script>
 
-  </head>
-  <body>
+</head>
+
+<body>
+
     <body>
 
         <section class="section">
-          <div class="container has-text-centered">
-              <!-- Add filename here -->
-            <h1 class="title">Amer's Resume</h1> 
-            <button id="download" class="button is-success">
+            <div class="container has-text-centered">
+                <!-- Add filename here -->
+                <h1 class="title">
+                    <input id="filename" class="input is-marginless is-inline is-size-4 has-background-beige-light white-bottom-border has-text-weight-bold"
+                        type="text" placeholder="filename">
+                </h1>
+                <button id="download" class="button is-success">
                     <span class="icon is-small">
-                      <i class="fas fa-check"></i>
+                        <i class="fas fa-check"></i>
                     </span>
                     <span>Download as PDF</span>
-            </button>
-          </div>
+                </button>
+            </div>
         </section>
         <!-- CV Wrapper Start Here -->
-        <section  class="section">
+        <section class="section">
             <div id="cv-wrapper" class="container has-background-white has-text-weight-semibold">
                 <!-- Introduction Section -->
-                <div class="container">  
+                <div class="container">
                     <br />
                     <!-- Name here -->
-                    <input class="input is-marginless is-inline is-size-4" type="text" placeholder="Your Name">
+                    <div class="has-padding-left-15 is-inline is-size-3 has-text-weight-semibold" contenteditable="true">
+                        Amer Kumar
+                    </div>
                     <!-- Objective Here -->
-                    <p contenteditable="true" class="is-marginless has-padding-15">A public-relations position which will maximize opportunities to develop and implement programs, to organize people and events, and to communicate positive ideas and images. Effective in public speaking and in managing a publicity/promotional campaign. </p>   
+                    <div contenteditable="true" class="has-padding-left-15 is-size-6 has-text-weight-normal">A public-relations position which will maximize opportunities to develop and implement programs, to organize
+                        people and events, and to communicate positive ideas and images. Effective in public speaking and
+                        in managing a publicity/promotional campaign.
+                    </div>
                 </div>
                 <!-- Contact Section -->
                 <div class="container tbBorder">
 
-                <div id="dContactWrapper" class="level">
+                    <div id="dContactWrapper" class="level">
                         <div class="level-item has-text-centered">
-                          <div>
-                            <p class="is-size-7 has-text-weight-light"><i class="far fa-envelope"></i>&nbsp;<span id="emailContact">amer.tanwani@gmail.com</span></p> 
-                          </div>
+                            <div>
+                                <p class="is-size-7 has-text-weight-light">
+                                    <i class="far fa-envelope"></i>&nbsp;
+                                    <span id="emailContact">amer.tanwani@gmail.com</span>
+                                </p>
+                            </div>
                         </div>
                         <div class="level-item has-text-centered">
-                          <div>
-                            <p class="is-size-7"><i class="fas fa-mobile-alt"></i>&nbsp;<span id="mobileContact">0312-3011155</span></p>
-                          </div>
+                            <div>
+                                <p class="is-size-7">
+                                    <i class="fas fa-mobile-alt"></i>&nbsp;
+                                    <span id="mobileContact">0312-3011155</span>
+                                </p>
+                            </div>
                         </div>
-                </div>
-                 
+                    </div>
+
                 </div>
                 <!-- Main Body Section -->
-                <!-- General Delete Button For all the additions in cv -->
-                 
-                <br />
+
                 <!-- Education Section -->
                 <div id="dEducationWrapper" class="container has-padding-20">
                     <h1 id="hEducationPopoverHolder" class="title is-size-2 is-inline has-text-weight-bold is-marginless">Education</h1>
                     <!-- Popover button for adding education items -->
                     <div id="dEducationPopover" style="display: none;">
-                            <button id="bAddEducation" class="button">Add Education</button>
+                        <button id="bAddEducation" class="button">Add Education</button>
                     </div>
-                  <div id="dEducationSection" class="deleteClass">   
-                    <div class="columns is-marginless">
-                        <div class="column is-9 is-paddingless">
-                            <!-- Degree Name -->
-                            <input class="input is-paddingless is-borderless is-size-4 has-text-weight-semibold" type="text" placeholder="Bachelor of Computer Engineering">
+                    <!-- Education Section that need to repeated -->
+                    <div id="dEducationSection" class="deleteClass">
+                        <div class="columns is-marginless">
+                            <div class="column is-9 is-paddingless">
+                                <!-- Degree Name -->
+                                <input class="input is-paddingless is-borderless is-size-4 has-text-weight-semibold" type="text" placeholder="Bachelor of Computer Engineering">
+                            </div>
+                            <div class="column is-paddingless">
+                                <!-- CGPA or Marks -->
+                                <input class="input is-inline is-paddingless has-text-right is-borderless is-size-6 has-text-weight-light"
+                                 type="text" placeholder="3.38/4.00">
+                            </div>
                         </div>
-                        <div class="column is-paddingless">
-                            <!-- CGPA or Marks -->
-                            <input class="input is-inline is-paddingless has-text-right is-borderless is-size-6 has-text-weight-light" type="text" placeholder="3.38/4.00">
+                        <div class="columns is-marginless">
+                            <div class="column is-9 is-paddingless">
+                                <!-- Institute Name -->
+                                <input class="input is-paddingless is-borderless is-size-6 is-negative-margin-10  has-text-weight-semibold" type="text" placeholder="Ghulam Ishaq Khan Institute of Engineering, Science and Technology">
+                            </div>
+                            <div class="column is-paddingless">
+                                <!-- Date and Range Picker -->
+                                <input class="input is-inline is-paddingless has-text-right is-borderless is-size-6 has-text-weight-light is-negative-margin-10 " 
+                                    type="text" name="daterange" placeholder="01/01/2018 - 01/15/2018" />
+                            </div>
+                        </div>
+                        <!-- Delete Popover for education -->
+                        <div id="dDeletePopoverEducation" style="display: none;">
+                            <button id="dDeletePopoverButtonEducation" class="button is-dark bDeleteAddition">
+                                <i class="far fa-trash-alt"></i>
+                            </button>
                         </div>
                     </div>
-                    <!-- Institute Name -->
-                    <input class="input is-paddingless is-borderless is-size-6 is-negative-margin-10  has-text-weight-semibold" type="text" placeholder="Ghulam Ishaq Khan Institute of Engineering, Science and Technology">
-                    <!-- Date and Range Picker -->
-                    <input class="input is-paddingless  is-borderless is-size-7 is-negative-margin-10 has-text-weight-light"  type="text" name="daterange" value="01/01/2018 - 01/15/2018" />
-                    <div id="dDeletePopover" style="display: none;">
-                        <button id="dDeletePopoverButton" class="button is-dark bDeleteAddition"><i class="far fa-trash-alt"></i></button>
-                    </div> 
-                </div> 
-            </div>
+                </div>
+
+
                 <!-- Work Experience Section -->
-                <div class="container has-padding-20">
-                        <h1 class="title is-size-2 has-text-weight-bold is-marginless">Work Experience</h1>
+                <div id="dWorkExperienceWrapper" class="container has-padding-20">
+                    <h1 id="hWorkExperiencePopoverHolder" class="title is-size-2 has-text-weight-bold is-marginless is-inline">Work Experience</h1>
+                    <!-- Popover button for adding work experience items -->
+                    <div id="dWorkExperiencePopover" style="display: none;">
+                        <button id="bAddWorkExperience" class="button">Add Work</button>
+                    </div>
+
+                    <!-- Work Experience Section that need to be repeated -->
+                    <div id="dWorkExperienceSection" class="deleteClass">
                         <div class="columns is-marginless">
                             <div class="column is-9 is-paddingless">
                                 <!-- Title of Project -->
@@ -107,44 +144,103 @@
                         <!-- Company Name -->
                         <input class="input is-paddingless is-borderless is-size-6 is-negative-margin-10 has-text-weight-semibold" type="text" placeholder="Teradata">
                         <!-- Date and Range Picker -->
-                        <input class="input is-paddingless  is-borderless is-size-7 is-negative-margin-10 has-text-weight-light"  type="text" name="daterange" value="01/01/2018 - 01/15/2018" />
+                        <input class="input is-paddingless  is-borderless is-size-7 is-negative-margin-10 has-text-weight-light" type="text" name="daterange"
+                            value="01/01/2018 - 01/15/2018" />
                         <!-- Description of Project  -->
-                        <p contenteditable="true" class="is-marginless has-padding-15">Loading Real Time Twitter Tweets using Flume in Hadoop Framework and performing sentiment analysis by using dictionary of rated words. </p>   
+                        <p contenteditable="true" class="is-marginless has-padding-15">Loading Real Time Twitter Tweets using Flume in Hadoop Framework and performing sentiment analysis
+                            by using dictionary of rated words. </p>
+                        <!-- Delete Popover for work experience section -->
+                        <div id="dDeletePopoverWorkExperience" style="display: none;">
+                            <button id="dDeletePopoverButtonWorkExperience" class="button is-dark bDeleteAddition">
+                                <i class="far fa-trash-alt"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
+
+
                 <!-- Academic Projects Section -->
-                <div class="container has-padding-20">
-                        <h1 class="title is-size-2 has-text-weight-bold is-marginless">Academic Projects</h1>
+                <div id="dAcademicProjectsWrapper" class="container has-padding-20">
+                    <h1 id="hAcademicProjectsPopoverHolder" class="title is-size-2 has-text-weight-bold is-marginless is-inline">Academic Projects</h1>
+                    <!-- Popover button for adding academic project items -->
+                    <div id="dAcademicProjectsPopover" style="display: none;">
+                        <button id="bAddAcademicProjects" class="button">Add Project</button>
+                    </div>
+
+                    <!-- Academic Project Section that need to be repeated -->
+                    <div id="dAcademicProjectsSection" class="deleteClass">
                         <!-- Project Title -->
                         <input class="input is-paddingless is-borderless is-size-6 has-text-weight-semibold" type="text" placeholder="Simon Game Implementation Using Logic Gates">
                         <!-- Description of Project  -->
-                        <p contenteditable="true" class="is-marginless has-padding-15">Fall 2015 Digital Fundamentals Project. What i learnt from this project that it is very difficult to make simon game using simple logic ICs such as adder, mux , decoders etc yet not impossible. I was not able to complete it. </p>   
+                        <p contenteditable="true" class="is-marginless has-padding-15">Fall 2015 Digital Fundamentals Project. What i learnt from this project that it is very difficult
+                            to make simon game using simple logic ICs such as adder, mux , decoders etc yet not impossible.
+                            I was not able to complete it. </p>
+
+                        <!-- Delete Popover for academic projects section -->
+                        <div id="dDeletePopoverAcademicProjects" style="display: none;">
+                            <button id="dDeletePopoverButtonAcademicProjects" class="button is-dark bDeleteAddition">
+                                <i class="far fa-trash-alt"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                 <!-- Academics and Achievements Section -->
-                 <div class="container has-padding-20">
-                        <h1 class="title is-size-2 has-text-weight-bold is-marginless">Achievements</h1>
+
+
+                <!-- Academics and Achievements Section -->
+                <div id="dAchievementWrapper" class="container has-padding-20">
+                    <h1 id="hAchievementPopoverHolder" class="title is-size-2 has-text-weight-bold is-marginless is-inline">Achievements</h1>
+                    <!-- Popover button for adding achievments items -->
+                    <div id="dAchievementPopover" style="display: none;">
+                        <button id="bAddAchievement" class="button">Add Achievement</button>
+                    </div>
+
+                    <!-- Achievements Section that need to be repeated -->
+                    <div id="dAchievementSection" class="deleteClass">
                         <!-- Project Title -->
                         <input class="input is-paddingless is-borderless is-size-6 has-text-weight-semibold" type="text" placeholder="Android Basic Nanodegree By Udacity">
                         <!-- Description of Project  -->
-                        <p contenteditable="true" class="is-marginless has-padding-15">Completed Android Basics Nano degree Course by Google from Udacity. Did not bought any certification. Familiarity with Android but Nowadays learning golang.</p>
+                        <p contenteditable="true" class="is-marginless has-padding-15">Completed Android Basics Nano degree Course by Google from Udacity. Did not bought any certification.
+                            Familiarity with Android but Nowadays learning golang.</p>
+
+                        <!-- Delete Popover for achievements section -->
+                        <div id="dDeletePopoverAchievement" style="display: none;">
+                            <button id="dDeletePopoverButtonAchievement" class="button is-dark bDeleteAddition">
+                                <i class="far fa-trash-alt"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
                 <!-- Skills Section -->
-                <div class="container has-padding-20">
-                        <h1 class="title is-size-2 has-text-weight-bold is-marginless">Skills</h1>
-                        <span class="tag is-link">Java</span>
-                        <span class="tag is-link">Android</span>
-                        <span class="tag is-link">Golang</span>
-                        <span class="tag is-link">C/C++</span>
+                <div id="dSkillsWrapper" class="container has-padding-20">
+                    <h1 id="hSkillsPopoverHolder" class="title is-size-2 has-text-weight-bold is-marginless is-inline">Skills</h1>
+                    <!-- Popover button for adding skills items -->
+                    <div id="dSkillsPopover" style="display: none;">
+                        <button id="bAddSkills" class="button">Add Skill</button>
+                    </div>
+                    <div id="dSkillsSection" class="deleteClass">
+
+                        <span class="tag is-link">
+                            Java
+                        </span>
+
+                        <!-- Delete Popover for achievements section -->
+                        <div id="dDeletePopoverSkills" style="display: none;">
+                            <button id="dDeletePopoverButtonSkills" class="button is-dark bDeleteAddition">
+                                <i class="far fa-trash-alt"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
                 <br>
                 <br>
                 <br>
-            </div>
         </section>
-        
+
 
         <!-- CV Wrapper End Here -->
-       
-      </body>
-  <script src="js/bundle.js"></script>
-  </body>
+
+    </body>
+    <script src="js/bundle.js"></script>
+</body>
+
 </html>

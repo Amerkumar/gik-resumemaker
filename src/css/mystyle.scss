@@ -99,3 +99,13 @@ $input-shadow: none;
   }
 // tingle js for modal
 
+.has-background-beige-light {
+    background-color: $beige-lighter;
+}
+.has-padding-left-15 {
+    padding: 0px;
+    padding-left: 15px;
+}
+input:focus {
+    outline: 0px;
+}
