@@ -1,25 +1,5 @@
-require('../../daterangepicker/daterangepicker.min.js')
-
-var scr = document.createElement('script');
-scr.onload = function() {
-  display("Loaded: " + typeof ko);
-};
-scr.onerror = function() {
-  display("Error");
-};
-scr.src = "http://knockoutjs.com/downloads/knockout-3.2.0.js";
-document.querySelector("script").parentNode.appendChild(scr);
-
-function display(msg) {
-  $("<p>").html(String(msg)).appendTo(document.body);
-}
 function dateRangePicker() {
-
-    $('p[name="daterange"]').daterangepicker({
-        minDate: moment().subtract(2, 'years')
-      }, function (startDate, endDate, period) {
-        $(this).val(startDate.format('L') + ' – ' + endDate.format('L'))
-      });
+// could be used in future
 }
 
 // to intialize already present dates
