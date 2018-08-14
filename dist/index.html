@@ -82,7 +82,7 @@
 
                 <!-- Education Section -->
                 <div id="dEducationWrapper" class="container has-padding-20">
-                    <h1 id="hEducationPopoverHolder" class="title is-size-2 is-inline has-text-weight-bold is-marginless">Education</h1>
+                    <h1 id="hEducationPopoverHolder" class="title is-size-3 is-inline has-text-weight-bold is-marginless">Education</h1>
                     <!-- Popover button for adding education items -->
                     <div id="dEducationPopover" style="display: none;">
                         <button id="bAddEducation" class="button">Add Education</button>
@@ -96,19 +96,18 @@
                             </div>
                             <div class="column is-paddingless">
                                 <!-- CGPA or Marks -->
-                                <input class="input is-inline is-paddingless has-text-right is-borderless is-size-6 has-text-weight-light"
-                                 type="text" placeholder="3.38/4.00">
+                                <input class="input is-inline is-paddingless has-text-right is-borderless is-size-6 has-text-weight-light" type="text" placeholder="3.38/4.00">
                             </div>
                         </div>
-                        <div class="columns is-marginless">
+                        <div class="columns is-marginless is-1">
                             <div class="column is-9 is-paddingless">
                                 <!-- Institute Name -->
                                 <input class="input is-paddingless is-borderless is-size-6 is-negative-margin-10  has-text-weight-semibold" type="text" placeholder="Ghulam Ishaq Khan Institute of Engineering, Science and Technology">
                             </div>
                             <div class="column is-paddingless">
                                 <!-- Date and Range Picker -->
-                                <input class="input is-inline is-paddingless has-text-right is-borderless is-size-6 has-text-weight-light is-negative-margin-10 " 
-                                    type="text" name="daterange" placeholder="01/01/2018 - 01/15/2018" />
+                                <input class="input is-paddingless has-text-right is-borderless is-size-6 has-text-grey-lighter	 is-negative-margin-10 "
+                                    type="text" name="daterange" placeholder="01/01/2018-01/15/2018" />
                             </div>
                         </div>
                         <!-- Delete Popover for education -->
@@ -123,7 +122,7 @@
 
                 <!-- Work Experience Section -->
                 <div id="dWorkExperienceWrapper" class="container has-padding-20">
-                    <h1 id="hWorkExperiencePopoverHolder" class="title is-size-2 has-text-weight-bold is-marginless is-inline">Work Experience</h1>
+                    <h1 id="hWorkExperiencePopoverHolder" class="title is-size-3 has-text-weight-bold is-marginless is-inline">Work Experience</h1>
                     <!-- Popover button for adding work experience items -->
                     <div id="dWorkExperiencePopover" style="display: none;">
                         <button id="bAddWorkExperience" class="button">Add Work</button>
@@ -138,16 +137,22 @@
                             </div>
                             <div class="column is-paddingless">
                                 <!-- Location -->
-                                <input class="input is-inline is-paddingless has-text-right is-borderless is-size-6 has-text-weight-light" type="text" placeholder="Islamabad, PK">
+                                <input class="input is-inline is-paddingless has-text-right is-borderless is-size-6 has-text-weight-normal" type="text" placeholder="Islamabad, PK">
                             </div>
                         </div>
-                        <!-- Company Name -->
-                        <input class="input is-paddingless is-borderless is-size-6 is-negative-margin-10 has-text-weight-semibold" type="text" placeholder="Teradata">
-                        <!-- Date and Range Picker -->
-                        <input class="input is-paddingless  is-borderless is-size-7 is-negative-margin-10 has-text-weight-light" type="text" name="daterange"
-                            value="01/01/2018 - 01/15/2018" />
+                        <div class="columns">
+                            <div class="column is-9 is-paddingless">
+                                <!-- Company Name -->
+                                <input class="input is-paddingless is-borderless is-size-6 is-negative-margin-10 has-text-weight-semibold" type="text" placeholder="Teradata">
+                            </div>
+                            <div class="column is-paddingless">
+                                <!-- Date and Range Picker -->
+                                <input class="input is-paddingless has-text-right is-borderless is-size-6 has-text-grey-lighter	is-negative-margin-10" type="text"
+                                    name="daterange" value="01/01/2018-01/15/2018" />
+                            </div>
+                        </div>
                         <!-- Description of Project  -->
-                        <p contenteditable="true" class="is-marginless has-padding-15">Loading Real Time Twitter Tweets using Flume in Hadoop Framework and performing sentiment analysis
+                        <p contenteditable="true" class="">Loading Real Time Twitter Tweets using Flume in Hadoop Framework and performing sentiment analysis
                             by using dictionary of rated words. </p>
                         <!-- Delete Popover for work experience section -->
                         <div id="dDeletePopoverWorkExperience" style="display: none;">
@@ -161,7 +166,7 @@
 
                 <!-- Academic Projects Section -->
                 <div id="dAcademicProjectsWrapper" class="container has-padding-20">
-                    <h1 id="hAcademicProjectsPopoverHolder" class="title is-size-2 has-text-weight-bold is-marginless is-inline">Academic Projects</h1>
+                    <h1 id="hAcademicProjectsPopoverHolder" class="title is-size-3 has-text-weight-bold is-marginless is-inline">Academic Projects</h1>
                     <!-- Popover button for adding academic project items -->
                     <div id="dAcademicProjectsPopover" style="display: none;">
                         <button id="bAddAcademicProjects" class="button">Add Project</button>
@@ -172,7 +177,7 @@
                         <!-- Project Title -->
                         <input class="input is-paddingless is-borderless is-size-6 has-text-weight-semibold" type="text" placeholder="Simon Game Implementation Using Logic Gates">
                         <!-- Description of Project  -->
-                        <p contenteditable="true" class="is-marginless has-padding-15">Fall 2015 Digital Fundamentals Project. What i learnt from this project that it is very difficult
+                        <p contenteditable="true" class="is-marginless is-paddingless">Fall 2015 Digital Fundamentals Project. What i learnt from this project that it is very difficult
                             to make simon game using simple logic ICs such as adder, mux , decoders etc yet not impossible.
                             I was not able to complete it. </p>
 
@@ -188,7 +193,7 @@
 
                 <!-- Academics and Achievements Section -->
                 <div id="dAchievementWrapper" class="container has-padding-20">
-                    <h1 id="hAchievementPopoverHolder" class="title is-size-2 has-text-weight-bold is-marginless is-inline">Achievements</h1>
+                    <h1 id="hAchievementPopoverHolder" class="title is-size-3 has-text-weight-bold is-marginless is-inline">Achievements</h1>
                     <!-- Popover button for adding achievments items -->
                     <div id="dAchievementPopover" style="display: none;">
                         <button id="bAddAchievement" class="button">Add Achievement</button>
@@ -199,7 +204,7 @@
                         <!-- Project Title -->
                         <input class="input is-paddingless is-borderless is-size-6 has-text-weight-semibold" type="text" placeholder="Android Basic Nanodegree By Udacity">
                         <!-- Description of Project  -->
-                        <p contenteditable="true" class="is-marginless has-padding-15">Completed Android Basics Nano degree Course by Google from Udacity. Did not bought any certification.
+                        <p contenteditable="true" class="is-marginless is-paddingless">Completed Android Basics Nano degree Course by Google from Udacity. Did not bought any certification.
                             Familiarity with Android but Nowadays learning golang.</p>
 
                         <!-- Delete Popover for achievements section -->
@@ -212,19 +217,19 @@
                 </div>
                 <!-- Skills Section -->
                 <div id="dSkillsWrapper" class="container has-padding-20">
-                    <h1 id="hSkillsPopoverHolder" class="title is-size-2 has-text-weight-bold is-marginless is-inline">Skills</h1>
+                    <h1 id="hSkillsPopoverHolder" class="title is-size-3 has-text-weight-bold is-marginless">Skills</h1>
                     <!-- Popover button for adding skills items -->
                     <div id="dSkillsPopover" style="display: none;">
                         <button id="bAddSkills" class="button">Add Skill</button>
                     </div>
-                    <div id="dSkillsSection" class="deleteClass">
+                    <div id="dSkillsSection" class="deleteClass is-inline">
 
-                        <span class="tag is-link">
+                        <span class="tag is-success" contenteditable="true">
                             Java
                         </span>
 
                         <!-- Delete Popover for achievements section -->
-                        <div id="dDeletePopoverSkills" style="display: none;">
+                        <div id="dDeletePopoverSkills" style="display: none;" >
                             <button id="dDeletePopoverButtonSkills" class="button is-dark bDeleteAddition">
                                 <i class="far fa-trash-alt"></i>
                             </button>

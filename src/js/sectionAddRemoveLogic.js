@@ -19,8 +19,8 @@ function addEducation() {
     clone = div.cloneNode(true); // true means clone all childNodes and all event handlers
     clone.id = "dEducationSection-" + eduSecCount;
     // console.log(clone.childNodes);
-    clone.childNodes[13].id = 'dDeletePopoverEducation-' + eduSecCount;
-    clone.childNodes[13].childNodes[1].id = "dDeletePopoverButtonEducation-" + eduSecCount;
+    clone.childNodes[7].id = 'dDeletePopoverEducation-' + eduSecCount;
+    clone.childNodes[7].childNodes[1].id = "dDeletePopoverButtonEducation-" + eduSecCount;
     document.querySelector('#dEducationWrapper').appendChild(clone);
     addDeletePopover('#dEducationSection-' + eduSecCount,
         '#dDeletePopoverEducation-' + eduSecCount,
@@ -41,9 +41,9 @@ function addWorkExperience() {
     var div = document.querySelector('#dWorkExperienceSection');
     clone = div.cloneNode(true); // true means clone all childNodes and all event handlers
     clone.id = "dWorkExperienceSection-" + workSecCount;
-    // console.log(clone.childNodes);
-    clone.childNodes[17].id = 'dDeletePopoverWorkExperience-' + workSecCount;
-    clone.childNodes[17].childNodes[1].id = "dDeletePopoverButtonWorkExperience-" + workSecCount;
+    console.log(clone.childNodes);
+    clone.childNodes[11].id = 'dDeletePopoverWorkExperience-' + workSecCount;
+    clone.childNodes[11].childNodes[1].id = "dDeletePopoverButtonWorkExperience-" + workSecCount;
     document.querySelector('#dWorkExperienceWrapper').appendChild(clone);
     addDeletePopover('#dWorkExperienceSection-' + workSecCount,
         '#dDeletePopoverWorkExperience-' + workSecCount,
