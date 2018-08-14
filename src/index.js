@@ -1,28 +1,29 @@
 require('./css/mystyle.scss');
 require('./js/popover');
 require('./js/modal');
+import html2pdf from 'html2pdf.js';
 
 // code for generating pdf
 function genPdf() {
-    html2canvas(document.getElementById("cv-wrapper")).then(function(canvas) {
-        
-        var img = canvas.toDataURL("image/png");
-        var doc = new jsPDF('p', 'mm', "a4");
-        var width = doc.internal.pageSize.width;    
-        var height = doc.internal.pageSize.height; 
-         
-        doc.addImage(img, 'JPEG', 0, 0, width, height);
-        // change the file name to something dynamic -- replace it with reg #
-        filename = document.querySelector("#filename").value;
+    
+    var filename = document.querySelector("#filename").value;
         if (filename == "")
-          filename = "gik_resumeMaker.pdf";
-        doc.save(filename + '.pdf'); 
-    });    
+          filename = "resume.pdf";
+    var element = document.querySelector('#cv-wrapper');
+    var opt = {
+        filename:     filename,
+        image:        { type: 'jpeg', quality: 1 },
+        html2canvas:  { scale: 2 },
+        jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+      };
+      
+      // New Promise-based usage:
+      html2pdf().from(element).set(opt).save();    
 }
 
 
 
-document.getElementById("download").onclick = genPdf;
+document.querySelector("#download").onclick = genPdf;
 
 // Truncate text in objective -- could be used to limit any tag
 
