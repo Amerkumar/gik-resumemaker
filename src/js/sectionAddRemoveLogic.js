@@ -1,11 +1,25 @@
+require('../../daterangepicker/daterangepicker.min.js')
 
+var scr = document.createElement('script');
+scr.onload = function() {
+  display("Loaded: " + typeof ko);
+};
+scr.onerror = function() {
+  display("Error");
+};
+scr.src = "http://knockoutjs.com/downloads/knockout-3.2.0.js";
+document.querySelector("script").parentNode.appendChild(scr);
+
+function display(msg) {
+  $("<p>").html(String(msg)).appendTo(document.body);
+}
 function dateRangePicker() {
-    $('input[name="daterange"]').daterangepicker({
-        "showDropdowns": true,
-        locale: {
-            cancelLabel: 'Clear'
-        }
-    });
+
+    $('p[name="daterange"]').daterangepicker({
+        minDate: moment().subtract(2, 'years')
+      }, function (startDate, endDate, period) {
+        $(this).val(startDate.format('L') + ' – ' + endDate.format('L'))
+      });
 }
 
 // to intialize already present dates
@@ -41,6 +55,7 @@ function addWorkExperience() {
     var div = document.querySelector('#dWorkExperienceSection');
     clone = div.cloneNode(true); // true means clone all childNodes and all event handlers
     clone.id = "dWorkExperienceSection-" + workSecCount;
+    // clone.className = "is-negative-margin-10";
     console.log(clone.childNodes);
     clone.childNodes[11].id = 'dDeletePopoverWorkExperience-' + workSecCount;
     clone.childNodes[11].childNodes[1].id = "dDeletePopoverButtonWorkExperience-" + workSecCount;
@@ -122,7 +137,7 @@ function addSkills() {
      // we need to call this every time to make date and range picker responsive
     //  for new added sections
     dateRangePicker();    
-    achSecCount++;
+    skillSecCount++;
 }
 // Bind event to add education button
 $(document).on('click', '#bAddSkills', addSkills);

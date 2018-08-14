@@ -40,3 +40,20 @@ function genPdf() {
 //   }
 
 document.getElementById("download").onclick = genPdf;
+
+// Truncate text in objective -- could be used to limit any tag
+
+function truncateText(selector, maxLength) {
+    var element = document.querySelector(selector),
+        truncated = element.innerText;
+
+    if (truncated.length > maxLength) {
+        truncated = truncated.substr(0,maxLength) + '...';
+    }
+    return truncated;
+}
+//You can then call the function with something like what i have below.
+function limitObjective() {
+    document.querySelector('#objective').innerText = truncateText('#objective', 180);
+}
+// document.querySelector('#objective').addEventListener('keypress', limitObjective);

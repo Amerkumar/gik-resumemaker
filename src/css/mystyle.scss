@@ -44,6 +44,7 @@ $input-shadow: none;
 //     border-color: transparent;
 // }
 @import "~tingle.js/dist/tingle.min.css";
+@import "../../daterangepicker/daterangepicker.min.css";
 
 #cv-wrapper textarea {
     resize : vertical;
@@ -78,6 +79,7 @@ $input-shadow: none;
 .is-negative-top-margin-20 {
     margin-top: -20px;
 }
+
 .is-margin-bottom-0 {
     margin-bottom: 0px!important;
 }
@@ -113,4 +115,7 @@ $input-shadow: none;
 }
 input:focus {
     outline: 0px;
+}
+.is-margin-5 {
+    margin: 5px;
 }
