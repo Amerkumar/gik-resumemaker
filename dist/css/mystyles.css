@@ -5979,6 +5979,10 @@ a.tag:hover {
   width: 793px;
   max-width: 793px; }
 
+.fixed-height {
+  height: 1090px;
+  max-height: 1090px; }
+
 .tbBorder {
   border-top: 3px solid grey;
   border-bottom: 3px solid grey; }
@@ -6037,3 +6041,10 @@ input:focus {
 
 .is-margin-5 {
   margin: 5px; }
+
+.page-a4-limit {
+  background-color: black;
+  position: absolute;
+  top: 1090px;
+  width: 793px;
+  height: 3px; }
