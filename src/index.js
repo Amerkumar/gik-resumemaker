@@ -1,6 +1,7 @@
 require('./css/mystyle.scss');
 require('./js/popover');
 require('./js/modal');
+require('./js/facultyDropdown');
 import html2pdf from 'html2pdf.js';
 
 // code for generating pdf

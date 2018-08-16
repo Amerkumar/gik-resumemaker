@@ -81,17 +81,21 @@
 
                 <!-- Education Section -->
                 <div id="dEducationWrapper" class="container has-padding-20">
-                    <h1 id="hEducationPopoverHolder" class="title is-size-4 is-inline has-text-weight-bold is-marginless"><i class="fas fa-graduation-cap"></i> Education</h1>
-                    <!-- Popover button for adding education items -->
-                    <div id="dEducationPopover" style="display: none;">
-                        <button id="bAddEducation" class="button">Add Education</button>
-                    </div>
-                    <!-- Education Section that need to repeated -->
-                    <div id="dEducationSection" class="deleteClass">
+                    <h1 id="hEducationPopoverHolder" class="title is-size-4 is-inline has-text-weight-bold is-marginless">
+                        <i class="fas fa-graduation-cap is-size-5"></i> Education</h1>
+                    <!-- Education Section for university static-->
+                    <div class="deleteClass">
                         <div class="columns is-marginless">
                             <div class="column is-9 is-paddingless">
                                 <!-- Degree Name -->
-                                <p class="input is-paddingless is-borderless is-size-5 has-text-weight-semibold is-inline" contenteditable="true">Bachelor of Science in Computer Engineering</p>
+                                <p class="is-paddingless is-borderless is-size-5 has-text-weight-semibold is-inline">Bachelor of Science in
+                                    <div class="is-inline">
+                                        <select class="is-paddingless is-borderless is-size-5 has-text-weight-semibold is-inline grey-font-color">
+                                            <option>Computer Engineering</option>
+                                            <option>Computer Science</option>
+                                        </select>
+                                    </div>
+                                </p>
                             </div>
                             <div class="column is-paddingless">
                                 <!-- CGPA or Marks -->
@@ -102,7 +106,44 @@
                         <div class="columns is-1 is-marginless">
                             <div class="column is-9 is-paddingless">
                                 <!-- Institute Name -->
-                                <p class="input is-paddingless is-borderless is-size-6 is-negative-margin-10 has-text-weight-semibold is-inline">Ghulam Ishaq Khan Institute of Engineering, Science and Technology</p>
+                                <p class="is-paddingless is-borderless is-size-6 is-negative-margin-10 has-text-weight-normal is-inline" contenteditable="true">Ghulam Ishaq Khan Institute of Engineering, Science and Technology</p>
+                            </div>
+                            <div class="column is-paddingless">
+                                <!-- Date and Range Picker -->
+                                <p class="input is-paddingless has-text-right is-borderless is-size-7 has-text-grey-light is-negative-margin-10 " type="text"
+                                    name="daterange" contenteditable="true">07/2017 - 08/2018</p>
+                            </div>
+                        </div>
+                        <!-- Delete Popover for education -->
+                        <div style="display: none;">
+                            <button id="dDeletePopoverButtonEducation" class="button is-dark bDeleteAddition">
+                                <i class="far fa-trash-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Popover button for adding education items -->
+                    <div id="dEducationPopover" style="display: none;">
+                        <button id="bAddEducation" class="button">Add Education</button>
+                    </div>
+                    <!-- Education Section that need to repeated -->
+                    <div id="dEducationSection" class="deleteClass">
+                        <div class="columns is-marginless">
+                            <div class="column is-9 is-paddingless">
+                                <!-- School Name -->
+                                <p class="is-paddingless is-borderless is-size-5 has-text-weight-semibold is-inline" contenteditable="true">School Name</p>
+                                </p>
+                            </div>
+                            <div class="column is-paddingless">
+                                <!-- CGPA or Marks -->
+                                <p class="input is-inline is-paddingless has-text-right is-borderless is-size-6 has-text-weight-light" contenteditable="true"
+                                    type="text" placeholder="">2 A's, 1 B's</p>
+                            </div>
+                        </div>
+                        <div class="columns is-1 is-marginless">
+                            <div class="column is-9 is-paddingless">
+                                <!-- Degree Name -->
+                                <p class="is-paddingless is-borderless is-size-6 is-negative-margin-10 has-text-weight-normal is-inline" contenteditable="true">FSc. Pre-Engineering</p>
                             </div>
                             <div class="column is-paddingless">
                                 <!-- Date and Range Picker -->
@@ -122,7 +163,8 @@
 
                 <!-- Work Experience Section -->
                 <div id="dWorkExperienceWrapper" class="container has-padding-20">
-                    <h1 id="hWorkExperiencePopoverHolder" class="title is-size-4 has-text-weight-bold is-marginless is-inline"><i class="fas fa-briefcase"></i> Work Experience</h1>
+                    <h1 id="hWorkExperiencePopoverHolder" class="title is-size-4 has-text-weight-bold is-marginless is-inline">
+                        <i class="fas fa-briefcase is-size-5"></i> Work Experience</h1>
                     <!-- Popover button for adding work experience items -->
                     <div id="dWorkExperiencePopover" style="display: none;">
                         <button id="bAddWorkExperience" class="button">Add Work</button>
@@ -133,23 +175,23 @@
                         <div class="columns is-marginless">
                             <div class="column is-9 is-paddingless">
                                 <!-- Project Name -->
-                                <p class="input is-paddingless is-borderless is-size-6 has-text-weight-semibold is-inline" contenteditable="true">Sentiment Analysis</p>
+                                <p class="is-paddingless is-borderless is-size-6 has-text-weight-semibold is-inline" contenteditable="true">Sentiment Analysis</p>
                             </div>
                             <div class="column is-paddingless">
                                 <!-- location -->
-                                <p class="input is-inline is-paddingless has-text-right is-borderless is-size-6 has-text-weight-normal" placeholder="Islamabad,PK"
+                                <p class="is-inline is-paddingless has-text-right is-borderless is-size-6 has-text-weight-normal" placeholder="Islamabad,PK"
                                     type="text">Islamabad,PK</p>
                             </div>
                         </div>
                         <div class="columns is-marginless is-1">
                             <div class="column is-9 is-paddingless">
                                 <!-- Company Name -->
-                                <p class="input is-paddingless is-borderless is-size-6 is-negative-margin-10  has-text-weight-normal is-inline" contenteditable="true">Teradata</p>
+                                <p class="is-paddingless is-borderless is-size-6 is-negative-margin-10  has-text-weight-normal is-inline" contenteditable="true">Teradata</p>
                             </div>
                             <div class="column is-paddingless">
                                 <!-- Date and Range Picker -->
-                                <p class="input is-paddingless has-text-right is-borderless is-size-7 has-text-grey-light is-negative-margin-10 is-inline"
-                                    type="text" name="daterange" placeholder="01/01/2018-01/15/2018" contenteditable="true">07/2017 - 08/2018</p>
+                                <p class="is-paddingless has-text-right is-borderless is-size-7 has-text-grey-light is-negative-margin-10 is-inline" type="text"
+                                    name="daterange" placeholder="01/01/2018-01/15/2018" contenteditable="true">07/2017 - 08/2018</p>
                             </div>
                         </div>
                         <!-- Description of Project  -->
@@ -167,7 +209,8 @@
 
                 <!-- Academic Projects Section -->
                 <div id="dAcademicProjectsWrapper" class="container has-padding-20">
-                    <h1 id="hAcademicProjectsPopoverHolder" class="title is-size-4 has-text-weight-bold is-marginless is-inline"><i class="fas fa-tasks"></i> Academic Projects</h1>
+                    <h1 id="hAcademicProjectsPopoverHolder" class="title is-size-4 has-text-weight-bold is-marginless is-inline">
+                        <i class="fas fa-tasks is-size-5"></i> Academic Projects</h1>
                     <!-- Popover button for adding academic project items -->
                     <div id="dAcademicProjectsPopover" style="display: none;">
                         <button id="bAddAcademicProjects" class="button">Add Project</button>
@@ -180,7 +223,7 @@
                         <!-- Description of Project  -->
                         <p contenteditable="true" class="is-marginless is-paddingless is-size-7 has-text-weight-normal">Fall 2015 Digital Fundamentals Project. What i learnt from this project that it is very difficult
                             to make simon game using simple logic ICs such as adder, mux , decoders etc yet not impossible.
-                            </p>
+                        </p>
 
                         <!-- Delete Popover for academic projects section -->
                         <div id="dDeletePopoverAcademicProjects" style="display: none;">
@@ -195,7 +238,8 @@
                 <!-- Academics and Achievements Section -->
                 <div id="dAchievementWrapper" class="container has-padding-20">
                     <div class="is-block">
-                        <h1 id="hAchievementPopoverHolder" class="title is-size-4 has-text-weight-bold is-marginless is-inline"><i class="fas fa-trophy"></i> Achievements</h1>
+                        <h1 id="hAchievementPopoverHolder" class="title is-size-4 has-text-weight-bold is-marginless is-inline">
+                            <i class="fas fa-trophy is-size-5"></i> Achievements</h1>
                     </div>
                     <!-- Popover button for adding achievments items -->
                     <div id="dAchievementPopover" style="display: none;">
@@ -203,15 +247,17 @@
                     </div>
 
                     <!-- Achievements Section that need to be repeated -->
-                    <div id="dAchievementSection" class="is-inline">
-                        <!-- Project Title -->
-                        <div class="is-block">
-                            <p class="is-paddingless is-borderless is-size-6 has-text-weight-semibold is-inline" contenteditable="true">Android Basic Nanodegree By Udacity</p>
-                        </div>
-                        <!-- Description of Project  -->
-                        <!-- <p contenteditable="true" class="is-marginless is-paddingless">Completed Android Basics Nano degree Course by Google from Udacity. Did not bought any certification.
-                            Familiarity with Android but Nowadays learning golang.</p> -->
-
+                    <div id="dAchievementSection" class="is-inline content">
+                        <ul class="is-margin-for-list">
+                            <li>
+                                <!-- Project Title -->
+                                <div class="is-block">
+                                    <p class="is-paddingless is-borderless is-size-6 has-text-weight-semibold is-inline" contenteditable="true">Android Basic Nanodegree By Udacity</p>
+                                </div>
+                                <!-- Description of Project  -->
+                                <p contenteditable="true" class="is-marginless is-paddingless has-text-weight-normal is-size-6">Completed Android Basics Nano degree Course by Google from Udacity. </p>
+                            </li>
+                        </ul>
                         <!-- Delete Popover for achievements section -->
                         <div id="dDeletePopoverAchievement" style="display: none;">
                             <button id="dDeletePopoverButtonAchievement" class="button is-dark bDeleteAddition">
@@ -223,7 +269,8 @@
                 <!-- Skills Section -->
                 <div id="dSkillsWrapper" class="container has-padding-20">
                     <div class="is-block">
-                        <h1 id="hSkillsPopoverHolder" class="title is-size-4 has-text-weight-bold is-marginless is-inline"><i class="fas fa-paint-brush"></i> Skills</h1>
+                        <h1 id="hSkillsPopoverHolder" class="title is-size-4 has-text-weight-bold is-marginless is-inline">
+                            <i class="fas fa-paint-brush is-size-5"></i> Skillset Matrix</h1>
                     </div>
                     <!-- Popover button for adding skills items -->
                     <div id="dSkillsPopover" style="display: none;">
@@ -231,9 +278,14 @@
                     </div>
                     <div id="dSkillsSection" class="deleteClass is-inline">
 
-                        <span class="tag" contenteditable="true">
-                            Java
-                        </span>
+                        <div class="columns is-marginless is-paddingless">
+                            <div class="column is-offset-1 is-2 is-paddingless">
+                                <p contenteditable="true" class="skill-set-matrix-border">Languages</p>
+                            </div>
+                            <div class="column is-paddingless">
+                                <p contenteditable="true" class="skill-set-matrix-border">Java, C/C++, Javascript, Python, SQL, PHP, Matlab, Bash Scripting</p>
+                            </div>
+                        </div>
 
                         <!-- Delete Popover for achievements section -->
                         <div id="dDeletePopoverSkills" style="display: none;">
@@ -243,10 +295,35 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Interest Section -->
+                <div id="dInterestWrapper" class="container has-padding-20">
+                    <div class="is-block">
+                        <h1 id="hInterestPopoverHolder" class="title is-size-4 has-text-weight-bold is-marginless is-inline">
+                            <i class="fas fa-basketball-ball is-size-5"></i> Interest and Extra Curricular</h1>
+                    </div>
+                    <!-- Popover button for adding interest items -->
+                    <div id="dInterestPopover" style="display: none;">
+                        <button id="bAddInterest" class="button">Add Interest</button>
+                    </div>
+                    <div class="is-margin-right-20 is-inline">
+                        <div id="dInterestSection" class="is-inline">
+
+                            <span class="tag is-light is-size-6 is-margin-5" contenteditable="true">Light</span>
+
+                            <!-- Delete Popover for achievements section -->
+                            <div id="dDeletePopoverInterest" style="display: none;">
+                                <button id="dDeletePopoverButtonInterest" class="button is-dark bDeleteAddition">
+                                    <i class="far fa-trash-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <br>
-                
-                    <hr class="is-block page-a4-limit is-marginless">
-                
+
+                <hr class="is-block page-a4-limit is-marginless">
+
             </div>
         </section>
 

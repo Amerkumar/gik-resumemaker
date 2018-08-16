@@ -11,6 +11,7 @@ var sections = [
                 ['#hAcademicProjectsPopoverHolder', '#dAcademicProjectsPopover'],
                 ['#hAchievementPopoverHolder', '#dAchievementPopover'],
                 ['#hSkillsPopoverHolder', '#dSkillsPopover'],
+                ['#hInterestPopoverHolder', '#dInterestPopover']
                ];
 for (let i = 0; i < sections.length; i++) {
     tippy(sections[i][0], {

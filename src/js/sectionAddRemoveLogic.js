@@ -84,8 +84,8 @@ function addAchievement() {
     clone = div.cloneNode(true); // true means clone all childNodes and all event handlers
     clone.id = "dAchievementSection-" + achSecCount;
     // console.log(clone.childNodes);
-    clone.childNodes[11].id = 'dDeletePopoverAchievement-' + achSecCount;
-    clone.childNodes[11].childNodes[1].id = "dDeletePopoverButtonAchievement-" + achSecCount;
+    clone.childNodes[5].id = 'dDeletePopoverAchievement-' + achSecCount;
+    clone.childNodes[5].childNodes[1].id = "dDeletePopoverButtonAchievement-" + achSecCount;
     document.querySelector('#dAchievementWrapper').appendChild(clone);
     addDeletePopover('#dAchievementSection-' + achSecCount,
         '#dDeletePopoverAchievement-' + achSecCount,
@@ -122,7 +122,26 @@ function addSkills() {
 // Bind event to add education button
 $(document).on('click', '#bAddSkills', addSkills);
 
+let interestSecCount = 1;
 
+function addInterest() {
+    var div = document.querySelector('#dInterestSection');
+    clone = div.cloneNode(true); // true means clone all childNodes and all event handlers
+    clone.id = "dInterestSection-" + interestSecCount;
+    console.log(clone.childNodes);
+    clone.childNodes[5].id = 'dDeletePopoverInterest-' + interestSecCount;
+    clone.childNodes[5].childNodes[1].id = "dDeletePopoverButtonInterest-" + interestSecCount;
+    document.querySelector('#dInterestWrapper').appendChild(clone);
+    addDeletePopover('#dInterestSection-' + interestSecCount,
+        '#dDeletePopoverInterest-' + interestSecCount,
+        "#dDeletePopoverButtonInterest-" + interestSecCount);
+     // we need to call this every time to make date and range picker responsive
+    //  for new added sections
+    dateRangePicker();    
+    interestSecCount++;
+}
+// Bind event to add education button
+$(document).on('click', '#bAddInterest', addInterest);
 
 
 function addDeletePopover(holderId, templateId, deletePopoverButtonId) {
