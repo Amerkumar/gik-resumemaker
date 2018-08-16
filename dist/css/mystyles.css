@@ -6048,3 +6048,6 @@ input:focus {
   top: 1090px;
   width: 793px;
   height: 3px; }
+
+.has-padding-5 {
+  padding: 5px; }
